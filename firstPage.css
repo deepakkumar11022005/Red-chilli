@@ -1,0 +1,237 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.home{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('background-iamge.jpg');
+
+}
+#redchilli_intro{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+}
+.row{
+   display: flex;
+}
+.navigation{
+    height: 80px;
+    display: flex;
+    /* background-color: aliceblue; */
+    flex-direction: column;
+}
+.logo_navigation_class{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    /* background-color: rgb(25, 23, 23); */
+    border-radius: 10px;
+    display: flex;
+    margin-top: 2px;
+    /* background-color: aliceblue; */
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#nav_item_content_div{
+  position: relative;
+    height: 350px;
+    z-index: 1 !important;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.profile_main{
+    margin-left: 20px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(231, 223, 223);
+    /* background-color: aliceblue; */
+}
+#gt_icon_profile{
+    margin-top: 15px;
+    margin-right: 10px;
+   font-weight: bolder;
+}
+.profile_icon{
+    width: 40%;
+    /* background-color: aliceblue; */
+ 
+display: flex;
+justify-content: space-between;
+font-size: 20px;
+padding: 14px;
+font-size: 20px;
+
+/* padding-bottom: 20px; */
+}
+#nav_item_in_smallscreen{
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    text-align: start;
+    display: none;
+    
+}
+#redchilles_logo_id{
+    height: 10rem;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.redchilles_logo_class{
+    width: 40% ;
+     display: flex;
+     justify-content: space-between;
+     display: flex;
+     /* background-color:bisque; */
+}
+#gt_icon{
+    color: gray;
+    font-weight: bolder;
+}
+#redchilles_navname{
+    margin-top: 25px;
+    color: rgb(241, 38, 38);
+    font-family:"Architects Daughter",sans-serif;
+    font-weight: bolder;
+    margin-left: 20px;
+    font-size: 25px;
+}
+.home_in_smallscreen,.report_in_smallscreen,.about_in_smallscreen,.menu_in_smallscreen,.delivery_in_smallscreen,.contact_in_smallscreen{
+    width: 90%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(232, 228, 228);
+}
+#logout_button{
+    margin-top: 15px;
+    width: 30%;
+    border: 1px solid rgb(219, 214, 214);
+    padding: 5px;
+    border-radius: 5px
+}
+.navigation_bar_class{
+    width: 60%;
+    /* background-color: aliceblue; */
+}
+.nav_item_in_fullscreen{
+    width: 90%;
+    display: flex;
+    /* background-color: aliceblue; */
+    justify-content: space-between;
+    margin-top: 25px;
+     
+}
+#nav_bar{
+    display: none !important;
+    width: 1.5em;
+    height: 1.3em;
+    margin-top: 35px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: aliceblue; */
+    cursor: pointer;
+}
+.line1_cross{
+    animation-name: cross1_animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    position: relative;
+    transition: 0s;
+}
+.line3_cross{
+    animation-name: cross2_animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    position: relative;
+    transition: 0s;
+}
+@keyframes cross1_animation{
+    0%{
+         rotate: 0deg;
+    }
+    25%{
+        transform: 40%;
+        rotate: -15deg;
+        bottom: 1px;
+    }
+    50%{
+        transform: 40%;
+        rotate: -25deg;
+        bottom: 1px;
+    }
+    100%{
+        transform: 40%;
+        rotate: -45deg;
+        bottom: 1px;
+    }
+}
+@keyframes cross2_animation{
+    0%{
+         rotate: 0deg;
+    }
+    25%{
+        transform-origin: 40%;
+        rotate: 15deg;
+        top: -1px;
+    }
+    50%{
+        transform-origin: 40%;
+        rotate: 25deg;
+        top: -7px;
+    }
+    100%{
+         transform-origin: 40%;
+        rotate: 45deg;
+        top: -10px;
+        
+    }
+}
+
+#line1,#line2,#line3{
+    display: flex;
+    height: 2px;
+    width: 20px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: rgb(57, 45, 45);
+}
+@media screen and (max-width:500px) {
+    #nav_bar{
+        display:flex !important;
+
+    }
+    .redchilles_logo_class{
+        width: 60%;
+        /* background-color: aliceblue; */
+    }
+    .navigation_bar_class{
+        display: flex;
+        justify-content: right;
+    }
+    .nav_item_in_fullscreen{
+        display: none;
+
+    }
+   
+}

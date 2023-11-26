@@ -1,31 +1,135 @@
-body{
+body {
     width: 100%;
     margin: 0;
     padding: 0;
 }
-.home{
+
+.navigation {
+    position: relative;
+    display: flex;
+    z-index: 2;
+}
+
+.first_div {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    /* background-color: aliceblue; */
+    padding-top: 15px;
+    padding-right: 15px;
+    color: gray;
+}
+
+.second_div {
+    padding-top: 15px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#login_div {
+    display: flex;
+    justify-content: center;
+    padding-left: 15px;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid gray;
+    /* background-color: aliceblue; */
+    /* color:rgba(255, 255, 0, 0.482) ; */
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#signup_div {
+    padding-right: 15px;
+    text-align: center;
+    width: 50%;
+    border-left: 1px solid gray;
+    /* background-color: aliceblue;` */
+    /* color:rgba(255, 255, 0, 0.482) ; */
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.login_page {
+    height: 500px;
+    width: 100%;
+    background-color: whitesmoke;
+    border: 2px solid gray;
+    z-index: -1;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    letter-spacing: 0.01rem;
+    height: 50%;
+    justify-content: space-evenly;
+}
+
+.view_menu_btn {
+    width: 20em;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#home_page_btn {
+    background-color: transparent;
+    color: wheat;
+    border: 2px solid rgba(255, 255, 0, 0.482);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#home_page_btn:hover {
+    background-color: rgba(255, 255, 0, 0.482);
+    color: wheat;
+}
+
+.home_page {
+
     margin-top: 15px;
     display: flex;
     justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    background: url('background-iamge.jpg');
+    background: url('https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?auto=compress&cs=tinysrgb&w=400');
+    height: 30rem;
+    background-position: center;
+    background-size: cover;
 
 }
-#redchilli_intro{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.5rem;
+
+#redchilli_intro {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2rem;
+    /* /* display: flex; */
+    color: white;
+    /* flex-direction: column;  */
 }
-.row{
-   display: flex;
+
+.row {
+    display: flex;
 }
-.navigation{
+
+.navigation {
     height: 80px;
     display: flex;
     /* background-color: aliceblue; */
     flex-direction: column;
 }
-.logo_navigation_class{
+
+.logo_navigation_class {
     position: fixed;
     width: 100%;
     height: 80px;
@@ -37,8 +141,9 @@ body{
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-#nav_item_content_div{
-  position: relative;
+
+#nav_item_content_div {
+    position: relative;
     height: 350px;
     z-index: 1 !important;
     width: 100%;
@@ -50,7 +155,8 @@ body{
     font-size: 20px;
     margin-top: 15px;
 }
-.profile_main{
+
+.profile_main {
     margin-left: 20px;
     display: flex;
     width: 90%;
@@ -58,87 +164,104 @@ body{
     border-bottom: 1px solid rgb(231, 223, 223);
     /* background-color: aliceblue; */
 }
-#gt_icon_profile{
+
+#gt_icon_profile {
     margin-top: 15px;
     margin-right: 10px;
-   font-weight: bolder;
+    font-weight: bolder;
 }
-.profile_icon{
+
+.profile_icon {
     width: 40%;
     /* background-color: aliceblue; */
- 
-display: flex;
-justify-content: space-between;
-font-size: 20px;
-padding: 14px;
-font-size: 20px;
 
-/* padding-bottom: 20px; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 14px;
+    font-size: 20px;
+
+    /* padding-bottom: 20px; */
 }
-#nav_item_in_smallscreen{
+
+#nav_item_in_smallscreen {
     z-index: 2;
     height: 100%;
     width: 100%;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    background-color:white;
+    background-color: white;
     text-align: start;
     display: none;
-    
+
 }
-#redchilles_logo_id{
+
+#redchilles_logo_id {
     height: 10rem;
     position: relative;
     margin-top: 10px;
     margin-left: 20px;
 }
-.redchilles_logo_class{
-    width: 40% ;
-     display: flex;
-     justify-content: space-between;
-     display: flex;
-     /* background-color:bisque; */
+
+.redchilles_logo_class {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    /* background-color:bisque; */
 }
-#gt_icon{
+
+#gt_icon {
     color: gray;
     font-weight: bolder;
 }
-#redchilles_navname{
+
+#redchilles_navname {
     margin-top: 25px;
     color: rgb(241, 38, 38);
-    font-family:"Architects Daughter",sans-serif;
+    font-family: "Architects Daughter", sans-serif;
     font-weight: bolder;
-    margin-left: 20px;
+    padding-left: 20px;
     font-size: 25px;
 }
-.home_in_smallscreen,.report_in_smallscreen,.about_in_smallscreen,.menu_in_smallscreen,.delivery_in_smallscreen,.contact_in_smallscreen{
+
+.home_in_smallscreen,
+.report_in_smallscreen,
+.about_in_smallscreen,
+.menu_in_smallscreen,
+.delivery_in_smallscreen,
+.contact_in_smallscreen {
     width: 90%;
     padding: 8px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(232, 228, 228);
 }
-#logout_button{
+
+#logout_button {
     margin-top: 15px;
     width: 30%;
     border: 1px solid rgb(219, 214, 214);
     padding: 5px;
     border-radius: 5px
 }
-.navigation_bar_class{
+
+.navigation_bar_class {
     width: 60%;
     /* background-color: aliceblue; */
 }
-.nav_item_in_fullscreen{
+
+.nav_item_in_fullscreen {
     width: 90%;
     display: flex;
     /* background-color: aliceblue; */
     justify-content: space-between;
     margin-top: 25px;
-     
+
 }
-#nav_bar{
+
+#nav_bar {
     display: none !important;
     width: 1.5em;
     height: 1.3em;
@@ -150,7 +273,8 @@ font-size: 20px;
     /* background-color: aliceblue; */
     cursor: pointer;
 }
-.line1_cross{
+
+.line1_cross {
     animation-name: cross1_animation;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -158,7 +282,8 @@ font-size: 20px;
     position: relative;
     transition: 0s;
 }
-.line3_cross{
+
+.line3_cross {
     animation-name: cross2_animation;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -166,49 +291,59 @@ font-size: 20px;
     position: relative;
     transition: 0s;
 }
-@keyframes cross1_animation{
-    0%{
-         rotate: 0deg;
+
+@keyframes cross1_animation {
+    0% {
+        rotate: 0deg;
     }
-    25%{
+
+    25% {
         transform: 40%;
         rotate: -15deg;
         bottom: 1px;
     }
-    50%{
+
+    50% {
         transform: 40%;
         rotate: -25deg;
         bottom: 1px;
     }
-    100%{
+
+    100% {
         transform: 40%;
         rotate: -45deg;
         bottom: 1px;
     }
 }
-@keyframes cross2_animation{
-    0%{
-         rotate: 0deg;
+
+@keyframes cross2_animation {
+    0% {
+        rotate: 0deg;
     }
-    25%{
+
+    25% {
         transform-origin: 40%;
         rotate: 15deg;
         top: -1px;
     }
-    50%{
+
+    50% {
         transform-origin: 40%;
         rotate: 25deg;
         top: -7px;
     }
-    100%{
-         transform-origin: 40%;
+
+    100% {
+        transform-origin: 40%;
         rotate: 45deg;
         top: -10px;
-        
+
     }
 }
 
-#line1,#line2,#line3{
+#line1,
+#line2,
+#line3 {
     display: flex;
     height: 2px;
     width: 20px;
@@ -216,22 +351,32 @@ font-size: 20px;
     border-radius: 15px;
     background-color: rgb(57, 45, 45);
 }
+
 @media screen and (max-width:500px) {
-    #nav_bar{
-        display:flex !important;
+    #nav_bar {
+        display: flex !important;
 
     }
-    .redchilles_logo_class{
+
+    .redchilles_logo_class {
         width: 60%;
         /* background-color: aliceblue; */
     }
-    .navigation_bar_class{
+
+    .navigation_bar_class {
         display: flex;
         justify-content: right;
     }
-    .nav_item_in_fullscreen{
+
+    .nav_item_in_fullscreen {
         display: none;
 
     }
-   
+
+    #redchilli_intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }

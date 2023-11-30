@@ -1,0 +1,35 @@
+<section>
+    <h2>Twilio Name Lookup</h2>
+    <form onsubmit="TwilioNameLookup()">
+        <label>Phone Number</label>
+        <input name="to" value="9786775859" autofocus>
+        <span></span>
+        <button>Make API Request</button>
+    </form>
+</section>
+<script>
+
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+var urlencoded = new URLSearchParams();
+urlencoded.append("token","9087729108");
+urlencoded.append("to","9786775859");
+urlencoded.append("body","WhatsApp API on alvochat.com works good");
+urlencoded.append("priority","");
+urlencoded.append("preview_url","");
+urlencoded.append("message_id","");
+
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: urlencoded,
+  redirect: 'follow'
+};
+
+fetch("https://api.alvochat.com/instance1199/messages/chat", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+</script>

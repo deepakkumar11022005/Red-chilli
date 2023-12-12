@@ -5,16 +5,95 @@ body {
     /* display: flex;
     justify-content: center; */
 }
+.item_type_border{
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 
+
+}
+.item_name{
+    font-weight: bolder;
+    background-color: bisque;
+}
+.item_info{
+    height: 220px;
+    width: 50%;
+    padding: 5px;
+    background-color: rgb(39, 97, 148);
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+ 
+
+ 
+
+}
+ 
+.item_type{
+    width: 100%;
+    height: 20px;
+    margin-bottom: 15px;
+    /* margin-top: 10px;
+    margin-left: 10px; */
+    background-color: rgb(31, 54, 74);
+
+}
+.item_comboo{
+    background-color: antiquewhite;
+}
+.item_price{
+    background-color: aqua;
+}
+.item_type_color{
+    height: 0.7em;
+    width: 0.7em;
+    background-color: green;
+    border-radius: 50%;
+}
+#item{
+    height: 250px;
+    width: 100%;
+    border: 1px solid rgb(203, 199, 199);
+    /* background-color: rgb(77, 18, 18); */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+    
+}
+.menu_body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    /* align-items: center; */
+}
 .comboo_div_class {
     position: absolute;
     width: 99vw;
     height: 300px;
     display: grid;
     grid-auto-flow: column;
+    grid-gap: 10px;
     overflow: scroll;
-
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  
 }
+.comboo_div_class::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
 
 .comboo_item1,
 .comboo_item2,
@@ -22,11 +101,12 @@ body {
 .comboo_item4,
 .comboo_item5,
 .comboo_item6 {
-    width: 100vw;
+    width: 50vw;
     height: 250px;
     background-color: aliceblue;
     border: 1px solid gray;
     border-radius: 8px;
+    margin-top: 15px;
 
 
 }
@@ -302,11 +382,17 @@ body {
     z-index: 2;
     height: 500px;
     width: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
     margin-left: auto;
     margin-right: auto;
     background-color: white;
     border: 1px solid red;
-    z-index: -1;
+    z-index: 2;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -641,12 +727,31 @@ body {
     background-color: rgb(57, 45, 45);
 }
 
+
+@media screen and (max-width:600px){
+    .comboo_item1,
+    .comboo_item2,
+    .comboo_item3,
+    .comboo_item4,
+    .comboo_item5,
+    .comboo_item6{
+        width:50vw ;
+    }
+}
+
 @media screen and (max-width:500px) {
     #nav_bar {
         display: flex !important;
 
     }
-
+    .comboo_item1,
+    .comboo_item2,
+    .comboo_item3,
+    .comboo_item4,
+    .comboo_item5,
+    .comboo_item6{
+        width:99vw ;
+    }
     #login_page {
         width: 85%;
     }
@@ -656,7 +761,7 @@ body {
     }
 
     .home_page {
-        height: 55vh;
+        height: 70vh;
     }
 
     #otp_verification_box {
